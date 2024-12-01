@@ -1,0 +1,48 @@
+<div *ngIf="mostrarCliente" class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-3 shadow-sm bg-primary-subtle bg-opacity-10" style="width: 500px;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3 class="text-muted">Información básica</h3>
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="regresar()">
+        Regresar
+      </button>
+    </div>
+
+    <div class="row">
+      <div
+        *ngFor="let etiqueta of etiquetas; let i = index"
+        [class.col-md-6]="i < etiquetas.length - 1"
+        [class.col-12]="i === etiquetas.length - 1"
+        class="mb-3">
+
+        <label class="form-label text-secondary fs-5">{{ etiqueta.label }}</label>
+        <div class="input-group input-group-sm">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [value]="etiqueta.value"
+            disabled>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div *ngIf="!mostrarCliente" class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-3 shadow-sm bg-primary-subtle bg-opacity-10" style="width: 500px;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="text-muted text-center">Cliente no Encontrado</h3>
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="regresar()">
+        Regresar
+      </button>
+    </div>
+  </div>
+</div>
+
+

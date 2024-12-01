@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-3 shadow-sm bg-primary bg-opacity-10" style="width: 500px;">
+    <h6 class="text-muted mb-3">Todos los campos son obligatorios</h6>
+
+    <form
+      [formGroup]="clientForm"
+      (ngSubmit)="emitBusqueda()">
+
+      <div class="mb-3">
+        <label for="tipoDocumento" class="form-label text-primary">Tipo de documento</label>
+        <select
+          class="form-select"
+          id="tipoDocumento"
+          formControlName="tipoDocumento"
+          [(ngModel)]="busqueda.tipoDocumento"
+          name="tipoDocumento">
+          <option *ngFor="let tipo of tipos" [value]="tipo.value">{{tipo.label}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label text-primary">Número de documento</label>
+        <input
+          type="text"
+          class="form-control"
+          id="numeroDocumento"
+          placeholder="Ingresa tu número de documento"
+          formControlName="numeroDocumento"
+          [(ngModel)]="busqueda.numeroDocumento"
+          name="numeroDocumento"
+          appApplyMask
+        />
+        <label *ngIf="!clientForm.valid" class="form-label text-danger">
+          El documento debe tener entre 8 y 11 caracteres
+        </label>
+      </div>
+      <button
+        class="btn btn-primary"
+        [disabled]="!clientForm.valid"
+      >
+        Buscar
+      </button>
+    </form>
+  </div>
+</div>
