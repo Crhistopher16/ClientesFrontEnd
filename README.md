@@ -1,27 +1,25 @@
-# ClientesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+Este es un proyecto desarrollado con Angular. La aplicación trae los datos de un Cliente.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para ejecutar el proyecto en tu máquina local, necesitarás tener instalados los siguientes programas:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (v16.0 o superior)
+- [npm](https://www.npmjs.com/) (v7.0 o superior)
+- [Angular CLI](https://angular.io/cli) (v16.0 o superior)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+Sigue estos pasos para configurar el proyecto en tu entorno local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clona este repositorio en tu máquina.
+2. En la carpeta raíz ejecuta los siguientes comandos:
+   ```bash
+   npm install
+   ng serve -o
 
-## Running unit tests
+## Ejecución
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Una vez esté instalado e inicializado el proyecto, será necesario iniciar el Jar del ClientesBackEnd para consumir los datos y poder visualizarlos en el Front
+- [Repositorio](https://github.com/Crhistopher16/ClientesBackEnd.git) (BackEnd)
